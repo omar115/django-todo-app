@@ -23,3 +23,11 @@ def deleteTodo(request, todo_id):
     
     return HttpResponseRedirect('/todo/')
 
+def deleteAll(request):
+
+    del_all_item = TodoItem.objects.all()
+
+    del_all_item.delete()
+
+    return HttpResponseRedirect('/todo/')
+

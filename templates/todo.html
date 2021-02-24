@@ -16,6 +16,16 @@
             </form>
         </li>
     {% endfor %}
+
+</ul>
+
+<ul>
+    <form action="/deleteAll/" 
+                    style="display: inline;"
+                    method="POST">{% csrf_token %}
+                
+                <input type="submit" value="Delete_Everything" />
+            </form>
 </ul>
 
 <form action="/todo_app/" method="POST">{% csrf_token %}
